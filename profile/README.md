@@ -15,24 +15,27 @@ for user documentation and details about available plugins and hosts.
 
 ### SDKs for Plugin and Host Development
 
+Two SDKs are available, producing generally compatible results but
+with certain technical tradeoffs.
+
 * [`vamp-plugin-sdk`](https://github.com/vamp-plugins/vamp-plugin-sdk)
-  is the original C++ SDK for writing both plugins and hosts in C++
-  or, at a pinch, C. It supports all Vamp features and is compatible
-  with the C++11 standard onwards.
-  * Plugins using this SDK can be used in all Vamp hosts, although
-    some hosts only support limited subsets of feature types,
+  is the original C++ SDK for writing both plugins and hosts. It
+  supports all Vamp features and is compatible with C++11 or newer
+  standards.
+  * Plugins built with this SDK can be used in all Vamp hosts,
+    although some hosts only support limited subsets of feature types
     regardless of the SDK used.
-  * Hosts using this SDK can load all Vamp plugins.
+  * Hosts built with this SDK can load all Vamp plugins.
   
 * [`rt-vamp-plugin-sdk`](https://github.com/lukasberbuer/rt-vamp-plugin-sdk)
   is an alternative C++ SDK for use in real-time performance-critical
   applications, supporting a limited set of output feature structures
   and requiring C++20 or newer.
-  * Plugins using this SDK can be used in all Vamp hosts. They can
-    only return a limited set of feature types, but if your plugin
+  * Plugins built with this SDK can be used in all Vamp hosts. They
+    can only return a limited set of feature types, but if your plugin
     requires only those feature types, there is no technical
     disadvantage to using this SDK.
-  * Hosts using this SDK can load all Vamp plugins that use the same
-    limited set of feature types. However, only those plugins built
-    using the RT SDK can be real-time safe.
+  * Hosts built with this SDK can load all Vamp plugins that use the
+    same limited set of feature types, although only those plugins
+    built with the same RT SDK will be real-time safe.
 
