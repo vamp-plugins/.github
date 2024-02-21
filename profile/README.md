@@ -32,12 +32,13 @@ with certain technical tradeoffs.
   applications, supporting a limited set of output feature structures
   and requiring C++20 or newer.
   * Plugins built with this SDK can be used in all Vamp hosts. They
-    can only return a limited set of feature types, but if your plugin
-    requires only those feature types and you are confident this won't
-    change, there is no technical disadvantage to using this SDK.
+    can only return a limited subset of feature types, but if your
+    plugin requires only those feature types and you are confident
+    this won't change, there is no technical disadvantage to using
+    this SDK.
   * Hosts built with this SDK can load all Vamp plugins that use the
-    same limited set of feature types. Those built with the "original"
-    SDK can be used but will not be real-time safe.
+    same limited subset of feature types. But only those plugins also
+    built with this SDK will be real-time safe.
 
 ### Tools for Testing Plugins and Hosts
 
@@ -47,8 +48,8 @@ with certain technical tradeoffs.
   before making any public release of a plugin.
   
 * [`vamp-test-plugin`](https://github.com/vamp-plugins/vamp-test-plugin)
-  is a test plugin for use when writing Vamp hosts. Unlike the Plugin
-  Tester, it can't run any tests itself but provides a variety of
+  is a test plugin for use when writing Vamp hosts. Unlike the plugin
+  tester, it can't run any tests itself but provides a variety of
   different output types which you can use to check the behaviour of
   your host.
 
