@@ -15,7 +15,7 @@ for user documentation and details about available plugins and hosts.
 
 ### SDKs for Plugin and Host Development
 
-Two SDKs are available, producing generally compatible results but
+Two C++ SDKs are available, producing generally compatible results but
 with certain technical tradeoffs.
 
 * [`vamp-plugin-sdk`](https://github.com/vamp-plugins/vamp-plugin-sdk)
@@ -23,8 +23,8 @@ with certain technical tradeoffs.
   supports all Vamp features and is compatible with C++11 or newer
   standards.
   * Plugins built with this SDK can be used in all Vamp hosts,
-    although some hosts only support limited subsets of feature types
-    regardless of the SDK used.
+    although some hosts can only handle limited subsets of feature
+    types regardless of the SDK used.
   * Hosts built with this SDK can load all Vamp plugins.
   
 * [`rt-vamp-plugin-sdk`](https://github.com/lukasberbuer/rt-vamp-plugin-sdk)
@@ -33,9 +33,21 @@ with certain technical tradeoffs.
   and requiring C++20 or newer.
   * Plugins built with this SDK can be used in all Vamp hosts. They
     can only return a limited set of feature types, but if your plugin
-    requires only those feature types, there is no technical
-    disadvantage to using this SDK.
+    requires only those feature types and you are confident this won't
+    change, there is no technical disadvantage to using this SDK.
   * Hosts built with this SDK can load all Vamp plugins that use the
     same limited set of feature types. Those built with the "original"
     SDK can be used but will not be real-time safe.
 
+### Tools for Testing Plugins and Hosts
+
+* [Vamp Plugin Tester](https://github.com/vamp-plugins/vamp-plugin-tester)
+  is a command-line testing host for Vamp plugins. It runs a considerable
+  number of tests and reports any problems it finds. It should be used
+  before making any public release of a plugin.
+  
+* [Vamp Test Plugin](https://github.com/vamp-plugins/vamp-test-plugin)
+  is a test plugin for use when writing Vamp hosts. Unlike the Plugin
+  Tester, it can't run any tests itself, it just provides a variety of
+  different output types which you can use to verify that your host
+  handles them correctly.
