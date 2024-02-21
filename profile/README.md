@@ -36,6 +36,6 @@ with certain technical tradeoffs.
     requires only those feature types, there is no technical
     disadvantage to using this SDK.
   * Hosts built with this SDK can load all Vamp plugins that use the
-    same limited set of feature types, although only those plugins
-    built with the same RT SDK will be real-time safe.
+    same limited set of feature types. Those built with the "original"
+    SDK can be used but will not be real-time safe.
 
