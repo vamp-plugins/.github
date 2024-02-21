@@ -29,10 +29,10 @@ with certain technical tradeoffs.
   
 * [`rt-vamp-plugin-sdk`](https://github.com/lukasberbuer/rt-vamp-plugin-sdk)
   is an alternative C++ SDK for use in real-time performance-critical
-  applications, supporting a limited set of output feature structures
-  and requiring C++20 or newer.
+  applications, supporting a limited subset of output feature
+  types and requiring C++20 or newer.
   * Plugins built with this SDK can be used in all Vamp hosts. They
-    can only return a limited subset of feature types, but if your
+    can only return [a limited subset](https://github.com/lukasberbuer/rt-vamp-plugin-sdk?tab=readme-ov-file#plugin-restrictions) of feature types, but if your
     plugin requires only those feature types and you are confident
     this won't change, there is no technical disadvantage to using
     this SDK.
