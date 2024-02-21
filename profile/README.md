@@ -41,13 +41,25 @@ with certain technical tradeoffs.
 
 ### Tools for Testing Plugins and Hosts
 
-* [Vamp Plugin Tester](https://github.com/vamp-plugins/vamp-plugin-tester)
+* [`vamp-plugin-tester`](https://github.com/vamp-plugins/vamp-plugin-tester)
   is a command-line testing host for Vamp plugins. It runs a considerable
   number of tests and reports any problems it finds. It should be used
   before making any public release of a plugin.
   
-* [Vamp Test Plugin](https://github.com/vamp-plugins/vamp-test-plugin)
+* [`vamp-test-plugin`](https://github.com/vamp-plugins/vamp-test-plugin)
   is a test plugin for use when writing Vamp hosts. Unlike the Plugin
-  Tester, it can't run any tests itself, it just provides a variety of
-  different output types which you can use to verify that your host
-  handles them correctly.
+  Tester, it can't run any tests itself but provides a variety of
+  different output types which you can use to check the behaviour of
+  your host.
+
+### Documentation
+
+* [Programmer's Guide](https://vamp-plugins.org/guide.pdf) — the
+  original official guide, currently available only in PDF form.
+
+### License
+
+In general the SDK and accompanying tools are provided under
+permissive BSD/MIT license terms, to be used and redistributed in
+software of any type. Please check the individual repositories for
+more details.
