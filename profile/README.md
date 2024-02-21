@@ -19,15 +19,20 @@ for user documentation and details about available plugins and hosts.
   is the original C++ SDK for writing both plugins and hosts in C++
   or, at a pinch, C. It supports all Vamp features and is compatible
   with the C++11 standard onwards.
+  * Plugins using this SDK can be used in all Vamp hosts, although
+    some hosts only support limited subsets of feature types,
+    regardless of the SDK used.
+  * Hosts using this SDK can load all Vamp plugins.
   
 * [`rt-vamp-plugin-sdk`](https://github.com/lukasberbuer/rt-vamp-plugin-sdk)
   is an alternative C++ SDK for use in real-time performance-critical
   applications, supporting a limited set of output feature structures
   and requiring C++20 or newer.
-  * Plugins using the RT SDK can be used in all Vamp hosts, but can
-    only return a limited set of feature types. If your plugin fits
-    these limitations, there is no disadvantage to using this SDK.
-  * Hosts using the RT SDK can load all plugins that use the same
-    limited set of feature types, regardless of which SDK the plugins
-    were written against.
+  * Plugins using this SDK can be used in all Vamp hosts. They can
+    only return a limited set of feature types, but if your plugin
+    requires only those feature types, there is no technical
+    disadvantage to using this SDK.
+  * Hosts using this SDK can load all Vamp plugins that use the same
+    limited set of feature types. However, only those plugins built
+    using the RT SDK can be real-time safe.
 
