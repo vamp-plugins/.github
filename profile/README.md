@@ -55,8 +55,7 @@ with certain technical tradeoffs.
 
 ### Documentation
 
-* [Programmer's Guide](https://vamp-plugins.org/guide.pdf) — the
-  original official guide, currently available only in PDF form.
+* [Developer Documentation](https://github.com/vamp-plugins/doc/wiki)
 
 ### License
 
